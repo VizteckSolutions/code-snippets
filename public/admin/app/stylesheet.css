@@ -1,0 +1,127 @@
+.auto-center {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.auto-center-auth {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.modal-center {
+    text-align: center;
+}
+
+.padding-top {
+    padding-top: 10px;
+}
+
+.modal-message {
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.message-error {
+    color: #eb6f6f !important;
+}
+
+.message-error-auth {
+    color: #eb6f6f !important;
+    text-align: center;
+}
+
+.icons-list > div {
+    margin-bottom: 0 !important;
+}
+
+.top5 {
+    margin-top: 5px;
+}
+
+.top7 {
+    margin-top: 7px;
+}
+
+.top10 {
+    margin-top: 10px;
+}
+
+.top15 {
+    margin-top: 15px;
+}
+
+.top17 {
+    margin-top: 17px;
+}
+
+.top30 {
+    margin-top: 30px;
+}
+
+.top-5 {
+    margin-top: -5px;
+}
+
+.top-7 {
+    margin-top: -7px;
+}
+
+.top-10 {
+    margin-top: -10px;
+}
+
+.top-15 {
+    margin-top: -15px;
+}
+
+.top-17 {
+    margin-top: -17px;
+}
+
+.top-30 {
+    margin-top: -30px;
+}
+
+.bottom5 {
+    margin-bottom: 5px;
+}
+
+.bottom7 {
+    margin-bottom: 7px;
+}
+
+.bottom10 {
+    margin-bottom: 10px;
+}
+
+.bottom15 {
+    margin-bottom: 15px;
+}
+
+.bottom20 {
+    margin-bottom: 20px;
+}
+
+.bottom25 {
+    margin-bottom: 25px;
+}
+
+.bottom30 {
+    margin-bottom: 30px;
+}
+
+.width90 {
+    width: 90px;
+}
+
+.width190 {
+    width: 190px;
+}
+
+.width130 {
+    width: 130px;
+}
+
+.error-message-center {
+    margin-left: 5px;
+}

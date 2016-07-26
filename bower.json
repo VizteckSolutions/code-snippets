@@ -1,0 +1,21 @@
+{
+  "name": "sample vizteck project",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Waqas Noor"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-lodash": "^0.5.0"
+  }
+}

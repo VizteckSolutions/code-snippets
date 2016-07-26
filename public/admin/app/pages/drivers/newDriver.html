@@ -1,0 +1,67 @@
+<div ng-controller="driverController as driverCtrl" ng-init="driverCtrl.initializeDriver()">
+
+    <div ba-panel
+         ba-panel-title="New Driver"
+         ba-panel-class="with-scroll">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="inputFirstName" class="width90">First Name</label>
+                    <span class="message-error error-message-center"> {{driverCtrl.errors.fName}}</span>
+                    <input type="text" class="form-control" replace="[^a-zA-Z ]" with="" id="inputFirstName"
+                           placeholder="First Name"
+                           ng-model="driverCtrl.driver.fName">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="inputLastName" class="width90">Last Name</label>
+                    <span class="message-error error-message-center"> {{driverCtrl.errors.lName}}</span>
+                    <input type="text" class="form-control" id="inputLastName" replace="[^a-zA-Z ]" with=""
+                           placeholder="Last Name"
+                           ng-model="driverCtrl.driver.lName">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="inputFirstName" class="width90">Mobile</label>
+                    <span class="message-error error-message-center"> {{driverCtrl.errors.mobile}}</span>
+                    <input type="tel" class="form-control" replace="[^0-9()+-]" with="" id="inputMobile" placeholder="Mobile #"
+                           ng-model="driverCtrl.driver.mobile">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="inputFirstName" class="width90">Email</label>
+                    <span class="message-error error-message-center"> {{driverCtrl.errors.email}}</span>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email"
+                           ng-model="driverCtrl.driver.email">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="inputFirstName" class="width90">Address</label>
+                    <span class="message-error error-message-center"> {{driverCtrl.errors.address}}</span>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Address"
+                           ng-model="driverCtrl.driver.address">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="inputFirstName" class="width90">License</label>
+                    <span class="message-error error-message-center"> {{driverCtrl.errors.license}}</span>
+                    <input type="tex" class="form-control" replace="[^a-zA-Z0-9 -]" with="" id="inputLicense"
+                           placeholder="License"
+                           ng-model="driverCtrl.driver.license">
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" ng-click="driverCtrl.saveDriver()">Save</button>
+    </div>
+
+</div>

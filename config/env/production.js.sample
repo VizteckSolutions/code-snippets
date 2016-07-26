@@ -1,0 +1,24 @@
+/**
+ * Created by waqas_noor on 05/04/2016.
+ */
+
+module.exports = {
+//Production configuration options
+    sessionSecret: 'xHEW53mmS',
+    db: 'mongodb://getfueluser:vizteck123@ds019633.mlab.com:19633/get-fuel',
+    api: '/api/v1',
+    twilioSid: 'AC52be4363744eea5c34eaff1d6a80819d',
+    twilioAuth: 'a10674c3806e0691fd2c2b95307cb322',
+    twilioFrom: '+12406075389',
+    register: 'Your verification code is ',
+    forgetPassword: 'Your Reset Code is ',
+    geoCodingOptions: {
+        provider: 'google',
+        //// Optionnal depending of the providers
+        //httpAdapter: 'https', // Default
+        apiKey: 'AIzaSyC_NBpf4hfKo-4wsUGKY6xtheTH3Ze3qLg', // for Mapquest, OpenCage, Google Premier
+        //formatter: null         // 'gpx', 'string', ...
+    },
+    stripeApiKey: "sk_test_d4ZTNRqZ44tIEbbYbbhFnQDs",
+    port:4001
+};

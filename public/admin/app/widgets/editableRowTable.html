@@ -1,0 +1,119 @@
+<div class="add-row-editable-table">
+    <button class="btn btn-primary">Add row</button>
+</div>
+<table class="table table-bordered table-hover table-condensed">
+    <tr>
+        <td></td>
+        <td>Name</td>
+        <td>Status</td>
+        <td>Group</td>
+        <td>Actions</td>
+    </tr>
+    <tr class="editable-row">
+        <td>
+            1
+        </td>
+        <td>
+        <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+          Hero
+        </span>
+        </td>
+        <td class="select-td">
+        <span editable-select="user.status" e-name="status" e-form="rowform" e-selectpicker
+              e-ng-options="s.value as s.text for s in statuses">
+          Online
+        </span>
+        </td>
+        <td class="select-td">
+        <span editable-select="user.group" e-name="group" e-form="rowform" e-selectpicker
+              e-ng-options="g.id as g.text for g in groups">
+          Vizteck
+        </span>
+        </td>
+        <td>
+            <form editable-form name="rowform" ng-show="1" class="form-buttons form-inline">
+                <button type="submit" ng-disabled="1" class="btn btn-primary editable-table-button btn-xs">
+                    Save
+                </button>
+                <button type="button" ng-disabled="1" class="btn btn-default editable-table-button btn-xs">
+                    Cancel
+                </button>
+            </form>
+            <div class="buttons" ng-show="1">
+                <button class="btn btn-primary editable-table-button btn-xs">Edit</button>
+                <button class="btn btn-danger editable-table-button btn-xs">Delete</button>
+            </div>
+        </td>
+    </tr><tr class="editable-row">
+        <td>
+            1
+        </td>
+        <td>
+        <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+          Hero
+        </span>
+        </td>
+        <td class="select-td">
+        <span editable-select="user.status" e-name="status" e-form="rowform" e-selectpicker
+              e-ng-options="s.value as s.text for s in statuses">
+          Online
+        </span>
+        </td>
+        <td class="select-td">
+        <span editable-select="user.group" e-name="group" e-form="rowform" e-selectpicker
+              e-ng-options="g.id as g.text for g in groups">
+          Vizteck
+        </span>
+        </td>
+        <td>
+            <form editable-form name="rowform" ng-show="1" class="form-buttons form-inline">
+                <button type="submit" ng-disabled="1" class="btn btn-primary editable-table-button btn-xs">
+                    Save
+                </button>
+                <button type="button" ng-disabled="1" class="btn btn-default editable-table-button btn-xs">
+                    Cancel
+                </button>
+            </form>
+            <div class="buttons" ng-show="1">
+                <button class="btn btn-primary editable-table-button btn-xs">Edit</button>
+                <button class="btn btn-danger editable-table-button btn-xs">Delete</button>
+            </div>
+        </td>
+    </tr>
+    <tr class="editable-row">
+        <td>
+            1
+        </td>
+        <td>
+        <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+          Hero
+        </span>
+        </td>
+        <td class="select-td">
+        <span editable-select="user.status" e-name="status" e-form="rowform" e-selectpicker
+              e-ng-options="s.value as s.text for s in statuses">
+          Online
+        </span>
+        </td>
+        <td class="select-td">
+        <span editable-select="user.group" e-name="group" e-form="rowform" e-selectpicker
+              e-ng-options="g.id as g.text for g in groups">
+          Vizteck
+        </span>
+        </td>
+        <td>
+            <form editable-form name="rowform" ng-show="1" class="form-buttons form-inline">
+                <button type="submit" ng-disabled="1" class="btn btn-primary editable-table-button btn-xs">
+                    Save
+                </button>
+                <button type="button" ng-disabled="1" class="btn btn-default editable-table-button btn-xs">
+                    Cancel
+                </button>
+            </form>
+            <div class="buttons" ng-show="1">
+                <button class="btn btn-primary editable-table-button btn-xs">Edit</button>
+                <button class="btn btn-danger editable-table-button btn-xs">Delete</button>
+            </div>
+        </td>
+    </tr>
+</table>

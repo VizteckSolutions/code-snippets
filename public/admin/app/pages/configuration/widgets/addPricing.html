@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-sm-6">Regular Price $</label>
+            <input class="col-sm-6" ng-model="ctrl._pricing.regularPrice" placeholder="Regular Price"
+                   type="text" currency/>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-sm-6">Premium Price $</label>
+            <input class="col-sm-6" ng-model="ctrl._pricing.premiumPrice" placeholder="Premium Price"
+                   type="text" currency=""/>
+        </div>
+    </div>
+</div>
+<div class="row top7">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-sm-6">Postal Code</label>
+            <input class="col-sm-6" ng-model="ctrl._pricing.zip" placeholder="Postal Code"
+                   type="text" replace="[^0-9]" with=""/>
+        </div>
+    </div>
+
+</div>
+<div class="row" style="padding-top: 10px" ng-show="ctrl.error">
+    <!--<div class="col-md-offset-1 col-md-10">-->
+    <div class="message-error modal-center">
+        <strong>{{ctrl.error.status}}</strong> {{ctrl.error.msgInfo}}
+    </div>
+    <!--</div>-->
+</div>
+<!--<button type="submit" class="btn btn-primary">Submit</button>-->

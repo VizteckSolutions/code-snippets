@@ -1,0 +1,20 @@
+module.exports = {
+//development configuration options
+    sessionSecret: 'xHEW53mmS',
+    db: 'mongodb://getfueluser:vizteck123@ds015924.mlab.com:15924/get-fuel',
+    api: '/api/v1',
+    twilioSid: 'AC3f76ccaee1b7c5ee78edf24682713064',
+    twilioAuth: '453fdc8bdf7aa206135d9c94c187d7c8',
+    twilioFrom: '+12055188736',
+    register: 'Your verification code is ',
+    forgetPassword: 'Your Reset Code is ',
+    geoCodingOptions: {
+        provider: 'google',
+        //// Optionnal depending of the providers
+        //httpAdapter: 'https', // Default
+        apiKey: 'AIzaSyC_NBpf4hfKo-4wsUGKY6xtheTH3Ze3qLg', // for Mapquest, OpenCage, Google Premier
+        //formatter: null         // 'gpx', 'string', ...
+    },
+     stripeApiKey: "sk_test_d4ZTNRqZ44tIEbbYbbhFnQDs",
+     port:4000
+};

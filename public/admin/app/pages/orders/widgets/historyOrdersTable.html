@@ -1,0 +1,65 @@
+<div class="horizontal-scroll">
+    <table class="table" st-pipe="orderCtrl.fetchOrders" st-table="orderCtrl.orders">
+        <thead>
+        <tr class="sortable ">
+            <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+            <th>Customer</th>
+            <th>Phone</th>
+            <th>Requested Time</th>
+            <th>Fuel, Price</th>
+            <th>Zip Code/Location</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        </thead>
+        <tbody ng-show="!orderCtrl.isLoading&&!orderCtrl.noResults">
+        <tr ng-repeat="order in orderCtrl.orders">
+            <td class="table-id">{{$index+1}}</td>
+            <td>{{order.customer.fullName||'No Name'}}</td>
+            <td>{{order.customer.phone || 'No Phone'}}</td>
+
+            <td>{{order.startDay || 'No Start Day'}} {{order.startTime || 'No Start Time'}} -
+                {{order.endDay || 'No End Day'}} {{order.endTime || 'No Start Time'}}
+            </td>
+            <td>14 Gallons, 13$</td>
+            <td>{{order.postalCode}}, {{order.city}}</td>
+            <td class="text-capitalize">{{order.status || 'No Status'}}</td>
+            <td class="text-capitalize">
+                <button class="btn btn-success btn-sm width90" ng-show="order.status==='new'"
+                        ng-click="orderCtrl.orderAcceptAction(order)">
+                    Accept
+                </button>
+                <button class="btn btn-danger btn-sm width90" ng-show="order.status==='new'" style="width: 90px"
+                        ng-click="orderCtrl.orderRejectAction(order)">
+                    Reject
+                </button>
+                <button class="btn btn-success btn-sm width90" ng-show="order.status==='unassigned'" style="width: 90px"
+                        ng-click="orderCtrl.orderAcceptAction(order)">
+                    Assign
+                </button>
+                <button class="btn btn-success btn-sm width90" ng-show="order.status==='rejected'" style="width: 90px">
+                    Reschedule
+                </button>
+            </td>
+        </tbody>
+        <tbody ng-show="orderCtrl.isLoading">
+        <tr>
+            <td colspan="4" class="text-center">Loading ...</td>
+        </tr>
+        </tbody>
+        <tbody ng-show="orderCtrl.noResults">
+        <tr>
+            <td colspan="4" class="text-center">No Results Found</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="6" class="text-center">
+                <div st-pagination="" st-items-by-page="10"></div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+
+</div>

@@ -1,0 +1,46 @@
+<table class="table table-bordered table-hover table-condensed">
+    <tr>
+        <td>#</td>
+        <td>Start Day</td>
+        <td>Start Time</td>
+        <td>End Day</td>
+        <td>End Time</td>
+        <td>Service Charges</td>
+    </tr>
+    <tr class="editable-row" ng-repeat="slot in config.slots">
+        <td>
+            {{$index+1}}
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+          {{slot.startDay}}
+        </span>
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+         {{slot.startTime}}
+        </span>
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+        {{slot.endDay}}
+        </span>
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+        {{slot.endTime}}
+        </span>
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+        {{slot.serviceCharges}}$
+        </span>
+        </td>
+    </tr>
+
+</table>
+<div class="add-row-editable-table padding-top pull-right">
+    <button class="btn btn-primary pull-left"
+            ng-click="config.createSlotModal('/admin/app/pages/configuration/modalTemplates/basicModal.html', 'md')">Add Time Slot
+    </button>
+</div>

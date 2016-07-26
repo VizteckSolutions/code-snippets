@@ -1,0 +1,72 @@
+<div class="widgets" ng-controller="ordersController as orderCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="Filters">
+
+                <div class="col-md-1">
+                    <label class="checkbox-inline custom-checkbox nowrap">
+                        <input type="checkbox" id="checkboxAll"
+                               value="all" ng-model="orderCtrl.orderTypes.all" checked>
+                        <span>All</span>
+                    </label>
+                </div>
+                <div class="col-md-1">
+                    <label class="checkbox-inline custom-checkbox nowrap">
+                        <input type="checkbox" id="checkboxPending"
+                               value="inprogress" ng-model="orderCtrl.orderTypes.inprogress">
+                        <span>In Progress</span>
+                    </label>
+                </div>
+                <div class="col-md-1">
+                    <label class="checkbox-inline custom-checkbox nowrap">
+                        <input type="checkbox" id="checkboxFinished"
+                               ng-model="orderCtrl.orderTypes.finished" value="finished">
+                        <span>Finished</span>
+                    </label>
+                </div>
+                <div class="col-md-1">
+                    <label class="checkbox-inline custom-checkbox nowrap">
+                        <input type="checkbox" id="checkboxInprogess"
+                               ng-model="orderCtrl.orderTypes.newOrders" value="new">
+                        <span>New</span>
+                    </label>
+                </div>
+                <div class="col-md-1">
+                    <label class="checkbox-inline custom-checkbox nowrap">
+                        <input type="checkbox" id="checkboxAssigned"
+                               ng-model="orderCtrl.orderTypes.assigned" value="assigned">
+                        <span>Assigned</span>
+                    </label>
+                </div>
+                <div class="col-md-1">
+                    <label class="checkbox-inline custom-checkbox nowrap">
+                        <input type="checkbox" id="checkboxUnassigned"
+                               ng-model="orderCtrl.orderTypes.unassigned" value="unassigned">
+                        <span>Unassigned</span>
+                    </label>
+                </div>
+                <div class="col-md-1">
+                    <label class="checkbox-inline custom-checkbox nowrap">
+                        <input type="checkbox" id="checkboxRejected"
+                               ng-model="orderCtrl.orderTypes.rejected" value="rejected">
+                        <span>Rejected</span>
+                    </label>
+                </div>
+                <div class="col-md-offset-1 top-5 col-md-1">
+                    <div class="pull-left">
+                        <button class="btn btn-info btn-md width90" ng-click="orderCtrl.applyFilters()" type="button">Apply
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-1 top-5">
+                    <div class="pull-left">
+                        <button class="btn btn-info btn-md width90" type="button">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div ba-panel ba-panel-title="History" ba-panel-class="with-scroll">
+                <div include-with-scope="/admin/app/pages/orders/widgets/historyOrdersTable.html"></div>
+            </div>
+        </div>
+    </div>
+</div>

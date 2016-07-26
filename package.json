@@ -1,0 +1,53 @@
+{
+  "name": "sample vizteck project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VizteckSolutions/code-snippets.git"
+  },
+  "author": "Waqas Noor",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.0",
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "connect": "^3.4.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^1.1.0",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "geocoder": "^0.2.2",
+    "is-valid-coordinate": "0.0.1",
+    "lodash": "^4.13.1",
+    "md5": "^2.1.0",
+    "method-override": "^2.3.5",
+    "moment": "^2.14.1",
+    "mongoose": "^4.4.11",
+    "mongoose-currency": "^0.2.0",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "rand-token": "^0.2.1",
+    "socket.io": "^1.4.6",
+    "standard-error": "^1.1.0",
+    "stripe": "^4.7.0",
+    "twilio": "^2.9.1",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-env": "^0.4.4",
+    "grunt-nodemon": "^0.4.2",
+    "grunt-wiredep": "^3.0.1",
+    "jshint-stylish": "^2.2.0"
+  }
+}

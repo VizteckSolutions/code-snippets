@@ -1,0 +1,18 @@
+<div class="modal-content">
+    <div class="modal-header bg-info">
+        <i class="ion-flame modal-icon"></i><span>Job Assignment</span>
+    </div>
+    <div class="modal-body text-center" style="padding-left: 0 !important;">Select Driver</div>
+    <div class="form-group">
+        <select class="form-control selectpicker width130 auto-center" selectpicker title="Select Driver"
+                ng-model="ctrl.driver"
+                ng-options="driver as driver.fullName for driver in ctrl.drivers">
+        </select>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-info" ng-click="ctrl.assignJob()">Assign</button>
+        <button type="button" class="btn btn-warning" ng-click="ctrl.acceptJob()" ng-show="ctrl.order.status==='new'">Skip
+        </button>
+    </div>
+</div>

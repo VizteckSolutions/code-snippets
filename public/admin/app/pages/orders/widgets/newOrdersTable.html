@@ -1,0 +1,44 @@
+<div class="horizontal-scroll" ng-controller="ordersController as orderCtrl" ng-init="orderCtrl.fetchOrders('new')">
+    <table class="table" st-table="orderCtrl.orders" st-safe-src="orderCtrl.ordersData">
+        <thead>
+        <tr class="sortable ">
+            <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+            <th st-sort="fullName">Customer</th>
+            <th st-sort="phone">Phone</th>
+            <th st-sort="email">Requested Time</th>
+            <th st-sort="email">Zip Code/Location</th>
+            <th st-sort="email">Action</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="order in orderCtrl.orders">
+            <td class="table-id">{{$index+1}}</td>
+            <td>{{order.customer.fullName||'No Name'}}</td>
+            <td>{{order.customer.phone || 'No Phone'}}</td>
+            <td>{{order.startDay || 'No Start Day'}} {{order.startTime || 'No Start Time'}} -
+                {{order.endDay || 'No End Day'}} {{order.endTime || 'No Start Time'}}
+            </td>
+            <td>{{order.postalCode}}, {{order.city}}</td>
+            <td>
+                <form class="form-buttons form-inline">
+                    <button class="btn btn-primary editable-table-button btn-xs" ng-click="orderCtrl.orderAcceptAction(order)">
+                        Accept
+                    </button>
+                    <button class="btn btn-danger editable-table-button btn-xs" ng-click="orderCtrl.orderRejectAction(order)">
+                        Reject
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="6" class="text-center">
+                <div st-pagination="" st-items-by-page="orderCtrl.pageSize" st-displayed-pages="5"></div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+
+</div>

@@ -1,0 +1,35 @@
+<div class="horizontal-scroll">
+    <!--<div class="form-group select-page-size-wrap ">-->
+    <!--<label>Rows on page-->
+    <!--<select class="form-control selectpicker show-tick" title="Rows on page" selectpicker-->
+    <!--ng-model="pageSize" ng-options="i for i in [5,10,15,20,25]">-->
+    <!--</select>-->
+    <!--</label>-->
+    <!--</div>-->
+    <table class="table" st-table="drivers" st-safe-src="driversData">
+        <thead>
+        <tr class="sortable ">
+            <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+            <th st-sort="fullName">Name</th>
+            <th st-sort="username">Phone</th>
+            <th st-sort="email">Email</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="driver in drivers">
+            <td class="table-id">{{$index+1}}</td>
+            <td>{{driver.fullName||'No Name'}}</td>
+            <td>{{driver.phone||'No Phone'}}</td>
+            <td><a class="email-link" ng-href="mailto:{{driver.email}}">{{driver.email||'No Email'}}</a></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="6" class="text-center">
+                <div st-pagination="" st-items-by-page="pageSize" st-displayed-pages="5"></div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>

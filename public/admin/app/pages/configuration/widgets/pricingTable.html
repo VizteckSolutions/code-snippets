@@ -1,0 +1,48 @@
+<table class="table table-bordered table-hover table-condensed">
+    <tr>
+        <td>#</td>
+        <td>Postal Code</td>
+        <td>Premium Price</td>
+        <td>Regular Price</td>
+        <td>Actions</td>
+    </tr>
+    <tr class="editable-row" ng-repeat="price in config.pricing">
+        <td>
+            {{$index+1}}
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+         {{price.zip}}
+        </span>
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+        {{price.premiumPrice|currency}}
+        </span>
+        </td>
+        <td>
+        <span e-name="name" e-form="rowform" e-required>
+        {{price.regularPrice|currency}}
+        </span>
+        </td>
+        <td>
+            <div class="row icons-list primary">
+                <div class="col-xs-2">
+                    <i class="ion-edit"
+                       ng-click="config.createPricingModal('/admin/app/pages/configuration/modalTemplates/newPricingModal.html', 'md',price)"
+                    ></i>
+                </div>
+                <div class="col-xs-2 ng-scope">
+                    <i class="ion-trash-a"
+                       ng-click="config.confirmDialog('/admin/app/pages/configuration/modalTemplates/confirmModal.html', 'sm',price)"></i>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="add-row-editable-table padding-top pull-right">
+    <button class="btn btn-primary pull-left"
+            ng-click="config.createPricingModal('/admin/app/pages/configuration/modalTemplates/newPricingModal.html', 'md')">New
+        Area
+    </button>
+</div>

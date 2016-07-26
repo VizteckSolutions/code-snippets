@@ -1,0 +1,14 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
+
+*.iml
+
+.idea/
+node_modules
+public/bower
+config/env/development.js
+config/env/production.js
+/bower_components
+/config/env/development.js
+/config/env/production.js.sample
+/config/env/production.js
+/config/env/development.js.sample
